@@ -1,0 +1,27 @@
+# Temporary files
+**/tmp/**
+
+# Tmux plugins (submodules)  
+.config/tmux/plugins
+
+# Sensitive/Personal configurations (only in root)
+SuperClaude/
+github-copilot/
+borders/
+sketchybar/
+wezterm/
+claude/
+nvim.bak/
+raycast/
+
+# Personal symlinks (only in root)
+.neoconf.json
+flavor
+lazy-lock.json
+lazyvim.json  
+lua
+stylua.toml
+theme.toml
+
+# Claude settings
+.claude/
