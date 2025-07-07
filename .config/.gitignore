@@ -1,0 +1,5 @@
+# Temporary files
+**/tmp/**
+
+# Tmux plugins (submodules)
+tmux/plugins

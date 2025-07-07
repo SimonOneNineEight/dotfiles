@@ -1,0 +1,12 @@
+
+# Example config.toml for tmux-sessionizer
+
+# Paths to search for repositories
+paths = ["~/projects"]
+
+# Set a default session to switch to
+session = "default"
+
+# Display options
+full_path = false
+picker_highlight_color = "#ff8800"
