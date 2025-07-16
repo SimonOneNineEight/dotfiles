@@ -1,6 +1,36 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+
+-- TEXT OBJECTS REFERENCE:
+-- Text objects define WHAT to operate on, operators define WHAT TO DO
+-- Pattern: [operator][text object]
+-- 
+-- Built-in text objects:
+-- iw/aw = inner/around word
+-- is/as = inner/around sentence  
+-- ip/ap = inner/around paragraph
+-- i"/a" = inside/around quotes (also works with ' and `)
+-- i(/a( = inside/around parentheses (also works with ), {, }, [, ], <, >)
+-- 
+-- Examples:
+-- ciw = change inner word
+-- di" = delete inside quotes
+-- ya{ = yank around braces
+-- vi( = visually select inside parentheses
+-- 
+-- SURROUND PLUGIN (mini.surround):
+-- gsa = add surrounding (e.g., gsaiw" adds quotes around word)
+-- gsd = delete surrounding (e.g., gsd" removes quotes)
+-- gsr = replace surrounding (e.g., gsr"' changes quotes to single quotes)
+-- gsf = find surrounding (highlights next surrounding)
+-- 
+-- MULTIPLE OCCURRENCES EDITING:
+-- * = search for word under cursor
+-- cgn = change next search match
+-- . = repeat last change
+-- n = go to next match (use before . to change it)
+
 local keymap = vim.keymap
 local opt = { noremap = true, silent = true }
 
