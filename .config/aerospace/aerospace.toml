@@ -145,17 +145,19 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 [workspace-to-monitor-force-assignment]
-1 = "main"
-2 = "main"
-3 = "main"
-4 = "secondary"
-b = "main"
-e = "main"
-m = ["secondary", "main"]
-n = "main"
-t = "main"
-s = ["secondary", "main"]
-z = "main"
+# Monitor 1 = Built-in Retina Display (laptop screen)
+# Monitor 2 = EA242F (external monitor, set as main display)
+1 = 2              # External monitor
+2 = 2              # External monitor  
+3 = 1              # Laptop screen
+4 = 1              # Laptop screen
+b = 2              # Browser on external monitor
+e = 1              # File Explorer on laptop screen
+m = [2, 1]         # Messages preferably on external, fallback to laptop
+n = 1              # Notes on laptop screen
+t = 2              # Terminal on external monitor
+s = [2, 1]         # Spotify preferably on external, fallback to laptop
+z = 2              # Zoom on external monitor
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -176,6 +178,11 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+# Monitor movement commands  
+shift-1 = ['move-workspace-to-monitor --wrap-around prev', 'mode main']  # Move workspace to previous monitor
+shift-2 = ['move-workspace-to-monitor --wrap-around next', 'mode main']  # Move workspace to next monitor
+m = ['move-workspace-to-monitor --wrap-around next', 'mode main']  # Move to next monitor
 
 # Auto move app to window
 [[on-window-detected]]

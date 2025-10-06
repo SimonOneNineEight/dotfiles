@@ -1,19 +1,9 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-
-# Load plugins
-plugins=(
-    git 
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
-
-# Source oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
 # Starship prompt
 eval "$(starship init zsh)"
+
+# Zsh plugins
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Fix for duplicate libraries
 export KMP_DUPLICATE_LIB_OK=TRUE
@@ -81,9 +71,11 @@ alias cd=z
 # Tmux-sessionizer
 bindkey -s ^f "tmux-sessionizer\n"
 
+
 # Alias
 alias n='nvim'
 alias t='tmux'
+alias c='claude'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

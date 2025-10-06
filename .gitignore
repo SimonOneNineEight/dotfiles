@@ -13,6 +13,8 @@ wezterm/
 claude/
 nvim.bak/
 raycast/
+aerospace/
+tmux/
 
 # Personal symlinks (only in root)
 .neoconf.json
